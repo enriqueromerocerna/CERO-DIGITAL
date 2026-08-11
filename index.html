@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cero Digital — Haz que vuelvan.</title>
-<meta name="description" content="Cero Fideliza: un programa de fidelización digital personalizado para tu negocio. Sin tarjetas impresas, sin aplicaciones, sin complicaciones.">
+<meta name="description" content="Cero Fideliza: un programa de fidelización digital personalizado para tu negocio. Tu marca en el celular de tus clientes, siempre a un toque.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -194,6 +194,85 @@
   .phone-menu{ margin-top:20px; display:flex; flex-direction:column; gap:8px;}
   .phone-menu div{ font-size:0.78rem; color:var(--muted); padding:9px 12px; background:rgba(33,20,104,0.05); border-radius:10px;}
 
+  /* ---------- HOMESCREEN SECTION ---------- */
+  .homescreen{ background:var(--white); padding:96px 0; }
+  .homescreen-inner{ display:grid; grid-template-columns:1fr 0.95fr; gap:56px; align-items:center;}
+  .lead-sm{ font-size:1.02rem; color:var(--muted); line-height:1.7; margin:0 0 26px;}
+  .hs-points{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:26px;}
+  .hs-point{ background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:16px 18px;}
+  .hs-point b{ display:block; font-size:0.92rem; margin-bottom:4px;}
+  .hs-point span{ font-size:0.83rem; color:var(--muted); line-height:1.4;}
+  .hs-tagline{ font-weight:700; font-size:1.05rem; margin:0 0 22px; color:var(--ink);}
+  .homescreen-visual{ display:flex; justify-content:center;}
+  .hs-phone{
+    width:290px; background:#0e0836; border-radius:38px; padding:16px 14px 22px;
+    box-shadow:0 40px 80px -20px rgba(33,20,104,0.35), 0 0 0 1px rgba(255,255,255,0.06);
+  }
+  .hs-phone-notch{ width:70px; height:6px; background:rgba(255,255,255,0.18); border-radius:6px; margin:2px auto 22px;}
+  .hs-app-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px 14px;}
+  .hs-app{ display:flex; flex-direction:column; align-items:center; gap:6px; cursor:pointer;}
+  .hs-icon{
+    width:52px; height:52px; border-radius:15px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.4rem;
+  }
+  .hs-icon--brand{ background:linear-gradient(140deg, var(--fucsia), #ff6fb8); box-shadow:0 0 0 2px rgba(255,207,0,0.7); }
+  .hs-app small{ color:rgba(255,255,255,0.75); font-size:0.68rem; text-align:center;}
+  .hs-app--brand{ animation:pulseIcon 2.4s ease-in-out infinite; }
+  @keyframes pulseIcon{ 0%,100%{ transform:scale(1);} 50%{ transform:scale(1.07);} }
+  .hs-hint{ text-align:center; color:rgba(255,255,255,0.55); font-size:0.78rem; margin:22px 0 0;}
+  @media (max-width:860px){ .homescreen-inner{ grid-template-columns:1fr;} .hs-points{ grid-template-columns:1fr;} }
+
+  /* ---------- INTERACTIVE DEMO ---------- */
+  .demo{ background:var(--paper); }
+  .demo-stage{ display:flex; gap:48px; align-items:flex-start; justify-content:center; flex-wrap:wrap;}
+  .demo-phone{
+    width:280px; background:#0e0836; border-radius:36px; padding:12px;
+    box-shadow:0 40px 80px -20px rgba(33,20,104,0.4), 0 0 0 1px rgba(255,255,255,0.06);
+    flex-shrink:0;
+  }
+  .demo-screen{
+    background:linear-gradient(165deg, #ffffff 0%, #f3effe 100%);
+    border-radius:26px;
+    min-height:440px;
+    position:relative;
+    overflow:hidden;
+    padding:22px 18px 26px;
+    color:var(--ink);
+  }
+  .demo-step{ display:none; animation:fadeStep .4s ease; }
+  .demo-step[data-step="1"]{ display:flex; }
+  @keyframes fadeStep{ from{ opacity:0; transform:translateY(8px);} to{ opacity:1; transform:translateY(0);} }
+  .demo-step-inner{ width:100%; }
+  .center-step{ text-align:center; padding-top:60px;}
+  .center-step h4{ font-size:1.2rem; margin:0 0 6px; font-weight:700;}
+  .demo-note{ font-size:0.85rem; color:var(--muted); margin:0 0 24px;}
+  .demo-eyebrow{ font-size:0.75rem; font-weight:700; color:var(--fucsia); text-transform:uppercase; letter-spacing:0.05em; margin:0 0 6px;}
+  .demo-step h4{ font-size:1.15rem; margin:0 0 18px; font-weight:700;}
+  .demo-field{ display:block; font-size:0.8rem; font-weight:600; color:var(--muted); margin-bottom:14px;}
+  .demo-field input{
+    display:block; width:100%; margin-top:6px;
+    padding:11px 13px; border-radius:10px; border:1px solid var(--line);
+    font-family:'Inter'; font-size:0.92rem; color:var(--ink); background:#fff;
+  }
+  .demo-field input:focus{ outline:2px solid var(--fucsia); outline-offset:1px; }
+  .demo-legal{ font-size:0.72rem; color:var(--muted); margin:4px 0 18px;}
+  .demo-btn{
+    width:100%; padding:13px; border:none; border-radius:100px;
+    background:var(--fucsia); color:#fff; font-weight:700; font-size:0.92rem;
+    cursor:pointer; font-family:'Inter'; transition:transform .15s ease;
+  }
+  .demo-btn:hover{ transform:translateY(-1px); }
+  .demo-btn:focus-visible{ outline:2px solid var(--ink); outline-offset:2px; }
+  .checkmark{
+    width:60px; height:60px; border-radius:50%; background:var(--yellow); color:var(--ink);
+    display:flex; align-items:center; justify-content:center; font-size:1.6rem; font-weight:700;
+    margin:0 auto 18px;
+  }
+  .demo-caption{ max-width:280px; display:flex; flex-direction:column; gap:16px; padding-top:12px;}
+  .demo-caption p{ font-size:0.9rem; color:var(--muted); line-height:1.5; margin:0;}
+  .demo-caption b{ color:var(--fucsia); }
+
   /* ---------- SECTION SCAFFOLD ---------- */
   section{ padding:96px 0; }
   .section-head{ max-width:640px; margin-bottom:56px;}
@@ -281,6 +360,18 @@
     padding:44px 34px;
     color:#fff;
     text-align:center;
+  }
+  .caso-logo-wrap{ display:flex; justify-content:center; margin-bottom:20px;}
+  .caso-logo-card{
+    background:#fff; border-radius:18px; padding:18px 26px;
+    display:inline-flex; box-shadow:0 12px 30px -10px rgba(0,0,0,0.25);
+  }
+  .caso-logo{ max-height:56px; width:auto; }
+  .caso-logo-fallback{
+    display:none; width:72px; height:72px; border-radius:18px;
+    background:rgba(255,255,255,0.2); align-items:center; justify-content:center;
+    font-family:'Space Grotesk'; font-weight:700; font-size:1.4rem; color:#fff;
+    border:1px solid rgba(255,255,255,0.35);
   }
   .caso-visual .big{ font-family:'Space Grotesk'; font-weight:700; font-size:2.6rem; }
   .caso-visual .small{ font-size:0.95rem; opacity:0.9; margin-top:6px;}
@@ -374,6 +465,7 @@
     <div class="logo"><span class="dot"></span>CERO DIGITAL</div>
     <nav class="nav-links">
       <a href="#como-funciona">Cómo funciona</a>
+      <a href="#tu-marca">Tu marca en su celular</a>
       <a href="#beneficios">Beneficios</a>
       <a href="#negocios">Para negocios</a>
       <a href="#planes">Planes</a>
@@ -395,8 +487,8 @@
       </div>
       <div class="no-list">
         <span>✕ Sin tarjetas impresas</span>
-        <span>✕ Sin aplicaciones</span>
-        <span>✕ Sin complicaciones</span>
+        <span>✓ Siempre a un toque</span>
+        <span>✓ Con la identidad de tu marca</span>
       </div>
     </div>
     <div class="phone-stage">
@@ -404,15 +496,15 @@
         <div class="phone-screen">
           <div class="phone-notch"></div>
           <div class="card-brand">
-            <span class="name">CAFÉ CENTRAL</span>
+            <span class="name">CERO GRADOS</span>
             <span class="badge"></span>
           </div>
           <p class="hello">Hola, <b>Andrea</b> 👋</p>
           <div class="stamps" id="stamps">
-            <div class="stamp filled">☕</div>
-            <div class="stamp filled">☕</div>
-            <div class="stamp filled">☕</div>
-            <div class="stamp filled">☕</div>
+            <div class="stamp filled">🍧</div>
+            <div class="stamp filled">🍧</div>
+            <div class="stamp filled">🍧</div>
+            <div class="stamp filled">🍧</div>
             <div class="stamp"></div>
             <div class="stamp"></div>
             <div class="stamp"></div>
@@ -420,9 +512,9 @@
             <div class="stamp"></div>
             <div class="stamp"></div>
           </div>
-          <p class="progress-label">4 de 10 visitas</p>
+          <p class="progress-label">4 de 10 sellos</p>
           <div class="progress-track"><div class="progress-fill"></div></div>
-          <p class="reward-note">Te faltan 6 sellos para tu café gratis ☕</p>
+          <p class="reward-note">Te faltan 6 sellos para tu premio GRATIS 🎁</p>
           <div class="phone-menu">
             <div>🎁 Mi recompensa</div>
             <div>🕘 Historial</div>
@@ -467,6 +559,115 @@
   </div>
 </section>
 
+<section class="homescreen" id="tu-marca">
+  <div class="wrap homescreen-inner">
+    <div class="reveal homescreen-copy">
+      <span class="kicker">El argumento principal</span>
+      <h2>Tu marca en el celular de tus clientes.</h2>
+      <p class="lead-sm">No queremos que tus clientes tengan que buscar un enlace cada vez que quieran consultar su tarjeta. Cero Fideliza les permite llevar el programa directamente a la pantalla de inicio de su celular — con el ícono y la identidad de tu negocio.</p>
+      <div class="hs-points">
+        <div class="hs-point"><b>Un acceso propio</b><span>Con el nombre y el ícono de tu marca.</span></div>
+        <div class="hs-point"><b>Siempre visible</b><span>Junto a las aplicaciones que usa todos los días.</span></div>
+        <div class="hs-point"><b>Acceso en segundos</b><span>Un toque y consulta su progreso y recompensas.</span></div>
+        <div class="hs-point"><b>Sin tiendas de aplicaciones</b><span>Se habilita directo desde su celular.</span></div>
+      </div>
+      <p class="hs-tagline">Más presencia para tu marca. Menos pasos para tu cliente.</p>
+      <a class="btn btn-primary whatsapp-link" href="#" target="_blank" rel="noopener">Quiero llevar mi programa al celular de mis clientes</a>
+    </div>
+    <div class="reveal homescreen-visual">
+      <div class="hs-phone">
+        <div class="hs-phone-notch"></div>
+        <div class="hs-app-grid">
+          <div class="hs-app"><span class="hs-icon" style="background:linear-gradient(140deg,#25D366,#128C7E);">💬</span><small>WhatsApp</small></div>
+          <div class="hs-app"><span class="hs-icon" style="background:linear-gradient(140deg,#405DE6,#E1306C);">📷</span><small>Instagram</small></div>
+          <div class="hs-app"><span class="hs-icon" style="background:linear-gradient(140deg,#1DA1F2,#0d8ddb);">🎵</span><small>Música</small></div>
+          <div class="hs-app hs-app--brand" id="hsCardIcon" tabindex="0" role="button" aria-label="Abrir tarjeta de fidelidad">
+            <span class="hs-icon hs-icon--brand">🍧</span><small>CERO GRADOS</small>
+          </div>
+          <div class="hs-app"><span class="hs-icon" style="background:linear-gradient(140deg,#f2f2f2,#cfcfcf);">🧭</span><small>Mapas</small></div>
+          <div class="hs-app"><span class="hs-icon" style="background:linear-gradient(140deg,#ff9500,#ff5e3a);">📷</span><small>Cámara</small></div>
+        </div>
+        <p class="hs-hint">👆 Toca el ícono de <b>CERO GRADOS</b> para ver la demo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="demo" id="demo">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="kicker">Pruébalo tú mismo</span>
+      <h2>Así lo vive tu cliente, de principio a fin.</h2>
+      <p>Esta demo reproduce el flujo real de <a href="https://enriqueromerocerna.github.io/CEROCLUB" target="_blank" rel="noopener" style="color:var(--fucsia); font-weight:600;">la tarjeta digital de Cero Grados</a>, ya en funcionamiento hoy.</p>
+    </div>
+    <div class="demo-stage reveal">
+      <div class="demo-phone">
+        <div class="phone-notch"></div>
+        <div class="demo-screen" id="demoScreen">
+
+          <div class="demo-step" data-step="1" style="display:flex;">
+            <div class="demo-step-inner center-step">
+              <span class="hs-icon hs-icon--brand" style="width:64px;height:64px;font-size:1.8rem;margin:0 auto 18px;">🍧</span>
+              <h4>CERO GRADOS</h4>
+              <p class="demo-note">Ícono en la pantalla de inicio</p>
+              <button class="demo-btn" data-next="2">Tocar para abrir</button>
+            </div>
+          </div>
+
+          <div class="demo-step" data-step="2">
+            <div class="demo-step-inner center-step" style="padding-top:20px;">
+              <h4 style="margin-bottom:2px;">CERO GRADOS 🍧</h4>
+              <p class="demo-note" style="margin-bottom:20px;">No es sólo hielo, es felicidad congelada.</p>
+              <p class="demo-eyebrow" style="text-align:left;">Junta 10 sellos y llévate tu premio GRATIS 🎁</p>
+              <p class="demo-note" style="text-align:left; margin:4px 0 18px;">Crea tu tarjeta digital en 10 segundos. Cada compra = 1 sello.</p>
+              <label class="demo-field">Tu nombre<input type="text" placeholder="Andrea Rodríguez" id="demoName"></label>
+              <label class="demo-field">Tu celular (9 dígitos)<input type="tel" placeholder="987654321" maxlength="9"></label>
+              <button class="demo-btn" data-next="3">Crear mi tarjeta 🍧</button>
+            </div>
+          </div>
+
+          <div class="demo-step" data-step="3">
+            <div class="demo-step-inner">
+              <div class="card-brand" style="margin-bottom:2px;">
+                <span class="name">CERO GRADOS</span>
+                <span class="badge" style="background:var(--fucsia);"></span>
+              </div>
+              <p class="hello" style="margin-bottom:14px;">Tarjeta de cliente frecuente</p>
+              <p class="hello">Hola, <b id="demoHelloName">Andrea</b> 👋</p>
+              <div class="stamps">
+                <div class="stamp"></div><div class="stamp"></div><div class="stamp"></div>
+                <div class="stamp"></div><div class="stamp"></div><div class="stamp"></div>
+                <div class="stamp"></div><div class="stamp"></div><div class="stamp"></div><div class="stamp"></div>
+              </div>
+              <p class="progress-label">0 de 10 sellos</p>
+              <div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div>
+              <p class="reward-note">Muestra este código al comprar</p>
+              <button class="demo-btn" data-next="4">Simular mi primera compra</button>
+            </div>
+          </div>
+
+          <div class="demo-step" data-step="4">
+            <div class="demo-step-inner center-step">
+              <div class="checkmark">✓</div>
+              <h4>¡Sello agregado!</h4>
+              <p class="demo-note">La tienda escaneó tu código y te dio 1 sello desde su Panel de tienda.</p>
+              <button class="demo-btn" data-next="1">Volver a empezar la demo</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="demo-caption">
+        <p><b>1.</b> El cliente toca el ícono guardado en su pantalla de inicio.</p>
+        <p><b>2.</b> Crea su tarjeta en 10 segundos: solo nombre y celular.</p>
+        <p><b>3.</b> Accede de inmediato a su tarjeta digital y muestra su código al comprar.</p>
+        <p><b>4.</b> La tienda escanea o busca al cliente en su Panel de tienda y pulsa "Dar 1 sello".</p>
+        <p style="padding-top:6px; border-top:1px dashed var(--line);">Al llegar a 10, la tarjeta muestra: <b>"¡Tarjeta llena! Canjea tu premio GRATIS en tienda."</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="benefits" id="beneficios">
   <div class="wrap">
     <div class="section-head reveal">
@@ -475,6 +676,7 @@
     </div>
     <div class="benefit-grid reveal">
       <div class="benefit"><div class="icon">💛</div><h4>Fideliza</h4><p>Premia a quienes deciden volver a comprarte.</p></div>
+      <div class="benefit"><div class="icon">🏠</div><h4>Mantente presente</h4><p>Tu programa puede permanecer en la pantalla de inicio del celular de tus clientes.</p></div>
       <div class="benefit"><div class="icon">📱</div><h4>Digitaliza</h4><p>Olvídate de imprimir y reimprimir tarjetas físicas.</p></div>
       <div class="benefit"><div class="icon">👥</div><h4>Identifica</h4><p>Empieza a conocer a los clientes que participan en tu programa.</p></div>
       <div class="benefit"><div class="icon">📊</div><h4>Controla</h4><p>Consulta sellos, recompensas e historial desde tu panel.</p></div>
@@ -497,6 +699,7 @@
         <ul>
           <li>Puede perderse</li>
           <li>Puede deteriorarse</li>
+          <li>Permanece en una billetera</li>
           <li>Debes volver a imprimir</li>
           <li>No conoces al cliente</li>
           <li>Poco control</li>
@@ -510,6 +713,7 @@
         <ul>
           <li>Disponible desde el celular</li>
           <li>100% digital</li>
+          <li>Puede estar en la pantalla de inicio</li>
           <li>Se gestiona digitalmente</li>
           <li>Construyes tu comunidad de clientes</li>
           <li>Historial de operaciones</li>
@@ -535,6 +739,12 @@
       <p style="font-weight:600; color:var(--ink);">Primero lo usamos. Ahora queremos llevarlo a otros negocios.</p>
     </div>
     <div class="reveal caso-visual">
+      <div class="caso-logo-wrap">
+        <div class="caso-logo-card">
+          <img src="cero-grados-logo.png" alt="Logotipo de Cero Grados" class="caso-logo" onerror="this.parentElement.style.display='none'; document.getElementById('casoLogoFallback').style.display='flex';">
+        </div>
+        <div id="casoLogoFallback" class="caso-logo-fallback">CG</div>
+      </div>
       <div class="big">10/10</div>
       <div class="small">sellos completados — Cero Grados</div>
       <div class="caso-stat-row">
@@ -634,6 +844,18 @@
         <p>Únicamente el personal autorizado por el negocio.</p>
       </details>
       <details>
+        <summary>¿Mis clientes tienen que buscar la tarjeta cada vez que compran? <span class="plus">+</span></summary>
+        <p>No. Pueden añadir su tarjeta a la pantalla de inicio de su celular y acceder a ella directamente desde el ícono personalizado de tu negocio.</p>
+      </details>
+      <details>
+        <summary>¿Funciona en iPhone y Android? <span class="plus">+</span></summary>
+        <p>Sí. La experiencia está diseñada para que los clientes accedan al programa desde ambos sistemas y guarden un acceso directo en su pantalla de inicio.</p>
+      </details>
+      <details>
+        <summary>¿Es una aplicación? <span class="plus">+</span></summary>
+        <p>Cero Fideliza utiliza una experiencia web optimizada para celular que puede añadirse a la pantalla de inicio del dispositivo, muy similar a usar una aplicación, sin depender de tiendas de aplicaciones.</p>
+      </details>
+      <details>
         <summary>¿Puedo evitar que un cliente reciba varios sellos el mismo día? <span class="plus">+</span></summary>
         <p>Sí. Las reglas del programa pueden establecer límites de frecuencia.</p>
       </details>
@@ -699,6 +921,32 @@
   document.querySelectorAll('.whatsapp-link, #nav-whatsapp').forEach(el => el.href = waUrl);
 
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Home-screen icon -> jumps to interactive demo and starts it
+  const hsIcon = document.getElementById('hsCardIcon');
+  if(hsIcon){
+    const openDemo = () => {
+      document.getElementById('demo').scrollIntoView({ behavior:'smooth', block:'start' });
+      goToDemoStep(1);
+    };
+    hsIcon.addEventListener('click', openDemo);
+    hsIcon.addEventListener('keypress', (e) => { if(e.key === 'Enter' || e.key === ' ') openDemo(); });
+  }
+
+  // Interactive demo flow
+  function goToDemoStep(step){
+    document.querySelectorAll('.demo-step').forEach(el => {
+      el.style.display = (el.dataset.step === String(step)) ? 'flex' : 'none';
+    });
+    if(step === 3){
+      const typedName = document.getElementById('demoName').value.trim();
+      document.getElementById('demoHelloName').textContent = typedName || 'Andrea';
+    }
+  }
+  document.querySelectorAll('.demo-btn').forEach(btn => {
+    btn.addEventListener('click', () => goToDemoStep(btn.dataset.next));
+  });
+  goToDemoStep(1);
 
   // scroll reveal
   const revealEls = document.querySelectorAll('.reveal');

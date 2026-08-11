@@ -12,6 +12,13 @@ const WHATSAPP_NUMBER = "51900000000"; // reemplaza por tu número real
 
 Cambia `51900000000` por tu número de WhatsApp real (código de país + número, sin espacios ni `+`). Todos los botones de la página ("Quiero fidelizar a mis clientes", "Quiero empezar con Start", etc.) apuntan automáticamente a ese número con un mensaje precargado.
 
+### Logo de Cero Grados (sección "Caso Cero")
+
+La sección Caso Cero busca cargar un archivo llamado `cero-grados-logo.png` en la misma carpeta que `index.html`. Si no lo encuentra, muestra automáticamente un placeholder con las iniciales "CG" — así que la página nunca se rompe, pero para verse completa solo tienes que:
+
+1. Guardar el logotipo real de Cero Grados como `cero-grados-logo.png` en esta carpeta.
+2. Subirlo al repositorio junto con `index.html`.
+
 También puedes reemplazar:
 - `S/ XX` y `S/ XX.XX` en la sección de precios (`#planes`) por tus montos reales.
 - El enlace de Instagram (actualmente `href="#"` en el footer).
